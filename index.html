@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Yin Weibang | Software Engineer</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700&display=swap" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="shortcut icon" href="/images/favicon.png" />
+
+  <meta name="description" content="Bang's personal website. Backend Engineer based in Japan, passionate about AI and building scalable systems." />
+  <meta name="author" content="Bang" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Bang | Software Engineer" />
+  <meta property="og:description" content="Backend Engineer in Japan. Seeking opportunities in global tech companies." />
+  <meta property="og:image" content="/images/profile.jpg" />
+  <meta property="og:url" content="https://yourdomain.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+</head>
+
+<body class="home">
+  <div id="container">
+    <div class="wrap">
+      <header id="header">
+        <h1><a href="/">Yin Weibang</a></h1>
+        <p id="subtitle">Backend Engineer | AI Enthusiast | Based in Japan</p>
+        
+        <nav>
+          <ul>
+            <li><a href="/" id="homeLink">Home</a></li>
+            <li><a href="/resume.pdf" target="_blank" id="resumeLink">Resume</a></li>
+          </ul>
+        </nav>
+        
+        <!-- Language Switcher -->
+        <div id="languageSwitcher">
+          <button onclick="switchLanguage('en')">English</button>
+          <button onclick="switchLanguage('jp')">日本語</button>
+        </div>
+      </header>
+
+      <main id="main">
+        <section style="display: flex; align-items: flex-start; gap: 20px;">
+            <div>
+              <img src="images/profile.jpg" alt="Profile Photo" width="140" style="border-radius:8px; margin-top: -10px;" />
+            </div>
+            <div>
+              <p id="introEn">Hello, I'm <strong>Bang</strong>, a software engineer with over 2 years of experience in backend development in Japan. I'm passionate about building scalable systems, exploring AI technologies, and collaborating on impactful products. I'm currently looking for opportunities at global tech companies like PayPay, Google, or other dynamic teams working at the intersection of infrastructure and AI.</p>
+              <p id="introJp" style="display:none;">こんにちは、<strong>邦（Bang）</strong>です。日本で2年以上のバックエンド開発経験があるソフトウェアエンジニアです。スケーラブルなシステムの構築やAI技術に興味を持っており、インフラストラクチャーとAIの交差点で影響力のある製品を作るチームでの協力に情熱を注いでいます。現在、PayPayやGoogleなどのグローバルなテック企業でのチャンスを探しています。</p>
+            </div>
+          </section>
+
+        <section>
+          <h2 id="skillsHeadingEn">Skills & Interests</h2>
+          <h2 id="skillsHeadingJp" style="display:none;">スキルと興味</h2>
+          <ul id="skillsListEn">
+            <li><strong>Languages:</strong> Python, Go, JavaScript</li>
+            <li><strong>Frameworks:</strong> FastAPI, Flask, React</li>
+            <li><strong>Tools:</strong> Docker, Kubernetes, Git, CI/CD</li>
+            <li><strong>Interests:</strong> AI programming assistants, distributed systems, technical writing</li>
+          </ul>
+          <ul id="skillsListJp" style="display:none;">
+            <li><strong>使用言語:</strong> Python, Go, JavaScript</li>
+            <li><strong>フレームワーク:</strong> FastAPI, Flask, React</li>
+            <li><strong>ツール:</strong> Docker, Kubernetes, Git, CI/CD</li>
+            <li><strong>興味:</strong> AIプログラミングアシスタント、分散システム、技術文書作成</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 id="projectsHeadingEn">Featured Projects</h2>
+          <h2 id="projectsHeadingJp" style="display:none;">代表的なプロジェクト</h2>
+          <ul id="projectsListEn">
+            <li><a href="/projects/ai-interview-assistant">AI Interview Assistant</a> – A voice-activated tool to support technical interviews, using Whisper and OpenAI APIs.</li>
+            <li><a href="https://github.com/Mr-Bang" target="_blank">My GitHub</a></li>
+          </ul>
+          <ul id="projectsListJp" style="display:none;">
+            <li><a href="/projects/ai-interview-assistant">AI 面接アシスタント</a> – Whisper と OpenAI API を使用して、音声で技術面接をサポートするツール。</li>
+            <li><a href="https://github.com/yourusername/someproject" target="_blank">GitHub プロジェクト</a></li>
+          </ul>
+        </section>
+      </main>
+
+      <footer>
+        <p id="footerTextEn">Find me on:
+          <a href="https://www.linkedin.com/in/yin-weibang-652688169/" target="_blank">LinkedIn</a> |
+          <a href="https://github.com/Mr-Bang" target="_blank">GitHub</a> |
+          <a href="mailto:mrweibang@outlook.com">Email</a>
+        </p>
+        <p id="footerTextJp" style="display:none;">連絡先：
+          <a href="https://www.linkedin.com/in/yin-weibang-652688169/" target="_blank">LinkedIn</a> |
+          <a href="https://github.com/Mr-Bang" target="_blank">GitHub</a> |
+          <a href="mailto:mrweibang@outlook.com">Email</a>
+        </p>
+        <p>&copy; 2025 Bang. All rights reserved.</p>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    function switchLanguage(language) {
+      if (language === 'en') {
+        document.getElementById('introEn').style.display = 'block';
+        document.getElementById('introJp').style.display = 'none';
+        document.getElementById('skillsHeadingEn').style.display = 'block';
+        document.getElementById('skillsHeadingJp').style.display = 'none';
+        document.getElementById('skillsListEn').style.display = 'block';
+        document.getElementById('skillsListJp').style.display = 'none';
+        document.getElementById('projectsHeadingEn').style.display = 'block';
+        document.getElementById('projectsHeadingJp').style.display = 'none';
+        document.getElementById('projectsListEn').style.display = 'block';
+        document.getElementById('projectsListJp').style.display = 'none';
+        document.getElementById('footerTextEn').style.display = 'block';
+        document.getElementById('footerTextJp').style.display = 'none';
+      } else if (language === 'jp') {
+        document.getElementById('introEn').style.display = 'none';
+        document.getElementById('introJp').style.display = 'block';
+        document.getElementById('skillsHeadingEn').style.display = 'none';
+        document.getElementById('skillsHeadingJp').style.display = 'block';
+        document.getElementById('skillsListEn').style.display = 'none';
+        document.getElementById('skillsListJp').style.display = 'block';
+        document.getElementById('projectsHeadingEn').style.display = 'none';
+        document.getElementById('projectsHeadingJp').style.display = 'block';
+        document.getElementById('projectsListEn').style.display = 'none';
+        document.getElementById('projectsListJp').style.display = 'block';
+        document.getElementById('footerTextEn').style.display = 'none';
+        document.getElementById('footerTextJp').style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>
